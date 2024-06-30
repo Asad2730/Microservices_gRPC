@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/Microservices_gRPC/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/Microservices_gRPC/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/Microservices_gRPC",
+  "projects": {
+    "Microservices_gRPC": {
+      "type": "application",
+      "root": "apps/Microservices_gRPC",
+      "entryFile": "main",
+      "sourceRoot": "apps/Microservices_gRPC/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/Microservices_gRPC/tsconfig.app.json"
+      }
+    },
+    "todo": {
+      "type": "application",
+      "root": "apps/todo",
+      "entryFile": "main",
+      "sourceRoot": "apps/todo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/todo/tsconfig.app.json"
+      }
+    }
   }
 }
