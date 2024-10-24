@@ -6,3 +6,6 @@ npm i ts-proto
 
 //this comand worked
 protoc --plugin=protoc-gen-ts_proto="G:\MyProjects\Tasks\Nest\Microservices_gRPC\api\node_modules\.bin\protoc-gen-ts_proto.cmd" --ts_proto_out=./ --ts_proto_opt=nestJs=true ./proto/todo.proto
+
+
+protoc --plugin=protoc-gen-ts_proto=".\node_modules\.bin\protoc-gen-ts_proto.cmd" --ts_proto_out=./ --ts_proto_opt=nestJs=true ./proto/blog.proto
